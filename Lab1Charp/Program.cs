@@ -1,16 +1,16 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
 
- static void task1()
+class Program
 {
-    Console.WriteLine("Task1 !");
-    Console.Write("s= ");
-    string? str = Console.ReadLine();
-    float s = 0; 
-    if (str != null) s = float.Parse(str);
-    double p = 4 * Math.Sqrt(s);
-    Console.WriteLine("p=" + p);
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Введiть довжину кола:");
+        double n = Convert.ToDouble(Console.ReadLine());
 
+        // Формула: L = 2 * π * r, де L - довжина кола, r - радіус
+        // Отже, r = L / (2 * π)
+        double radius = n / (2 * Math.PI);
+
+        Console.WriteLine($"Радіус кола дорівнює: {radius:F2}");
+    }
 }
-Console.WriteLine("Lab 1 !");
-task1();
-// continue ...
