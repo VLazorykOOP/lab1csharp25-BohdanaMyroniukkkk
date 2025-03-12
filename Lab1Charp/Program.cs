@@ -2,7 +2,7 @@
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main2(string[] args)
     {
         Console.WriteLine("Введiть довжину кола:");
         double n = Convert.ToDouble(Console.ReadLine());
