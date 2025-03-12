@@ -2,7 +2,7 @@
 
 class Program4
 {
-    static void Main(string[] args)
+    static void Main4(string[] args)
     {
         Console.WriteLine("Введiть кiлькiсть балiв (0-100):");
         int score = Convert.ToInt32(Console.ReadLine());
