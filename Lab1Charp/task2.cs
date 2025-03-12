@@ -1,33 +1,34 @@
-﻿using System;
+﻿using System; // Підключає простір імен System для використання класів Console, Convert тощо
 
-class Program2
+class Program2 // Оголошує клас Program2, який містить всю логіку програми
 {
-    static void Main(string[] args)
+    static void Main2(string[] args) // Головний метод програми, точка входу при запуску
     {
-        Console.WriteLine("Введiть тризначне число:");
-        int number = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Введіть тризначне число:"); // Виводить запит на введення тризначного числа
+        int number = Convert.ToInt32(Console.ReadLine()); // Зчитує введений рядок і перетворює його на ціле число
 
-        if (number < 100 || number > 999)
+        // Перевірка, чи число дійсно тризначне
+        if (number < 100 || number > 999) // Перевіряє, чи число поза межами 100-999
         {
-            Console.WriteLine("Помилка: введiть тризначне число (вiд 100 до 999)");
-            return;
+            Console.WriteLine("Помилка: введіть тризначне число (від 100 до 999)"); // Виводить повідомлення про помилку
+            return; // Завершує виконання програми, якщо число не тризначне
         }
 
-        int firstDigit = number / 100;
+        int firstDigit = number / 100; // Отримує першу цифру шляхом цілочисельного ділення на 100
+        int lastDigit = number % 10; // Отримує останню цифру як остачу від ділення на 10
 
-        int lastDigit = number % 10;
-
-        if (firstDigit > lastDigit)
+        // Порівняння цифр
+        if (firstDigit > lastDigit) // Перевіряє, чи перша цифра більша за останню
         {
-            Console.WriteLine($"Перша цифра ({firstDigit}) бiльша за останню ({lastDigit})");
+            Console.WriteLine($"Перша цифра ({firstDigit}) більша за останню ({lastDigit})"); // Виводить результат, якщо перша цифра більша
         }
-        else if (lastDigit > firstDigit)
+        else if (lastDigit > firstDigit) // Перевіряє, чи остання цифра більша за першу
         {
-            Console.WriteLine($"Остання цифра ({lastDigit}) бiльша за першу ({firstDigit})");
+            Console.WriteLine($"Остання цифра ({lastDigit}) більша за першу ({firstDigit})"); // Виводить результат, якщо остання цифра більша
         }
-        else
+        else // Виконується, якщо попередні умови хибні (цифри рівні)
         {
-            Console.WriteLine($"Перша цифра ({firstDigit}) дорiвнює останнiй ({lastDigit})");
+            Console.WriteLine($"Перша цифра ({firstDigit}) дорівнює останній ({lastDigit})"); // Виводить результат, якщо цифри рівні
         }
-    }
-}
+    } // Закриває блок методу Main
+} // Закриває клас Program2
