@@ -8,7 +8,7 @@ class Program5
         return sum * sum;
     }
 
-    static void Main(string[] args)
+    static void Main5(string[] args)
     {
         Console.WriteLine("Введiть перше дiйсне число:");
         double number1 = Convert.ToDouble(Console.ReadLine());
