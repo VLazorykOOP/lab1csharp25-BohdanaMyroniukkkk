@@ -2,7 +2,7 @@
 
 class Program6
 {
-    static void Main(string[] args)
+    static void Main6(string[] args)
     {
         Console.WriteLine("Введiть значення x:");
         double x;
